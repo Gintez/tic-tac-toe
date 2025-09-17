@@ -1,16 +1,16 @@
-import React from 'react';
-import { createUseStyles } from 'react-jss';
+import React from "react";
+import { createUseStyles } from "react-jss";
 
-import { ROWS } from 'types/constants';
+import { ROWS } from "types/constants";
 
-import Cell from './cell';
+import Cell from "./cell";
 
 const useStyles = createUseStyles({
   root: {
     padding: 5,
   },
   row: {
-    display: 'flex',
+    display: "flex",
   },
 });
 
@@ -27,10 +27,16 @@ export const Board = (props: Props) => {
 
   return (
     <div className={classes.root}>
+      <div>Add A title</div>
       {ROWS.map((row, index) => (
         <div data-qa="board-row" key={index} className={classes.row}>
-          {row.map(cellId => (
-            <Cell key={cellId} cellId={cellId} isDisabled={isDisabled} onChange={onCellChange} />
+          {row.map((cellId) => (
+            <Cell
+              key={cellId}
+              cellId={cellId}
+              isDisabled={isDisabled}
+              onChange={onCellChange}
+            />
           ))}
         </div>
       ))}
