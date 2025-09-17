@@ -19,7 +19,7 @@ const EndGameButton = (props: Props) => {
     actions.endGame();
   }
 
-  return <Button onClick={handleEndGame}>End Game NOW</Button>;
+  return <Button onClick={handleEndGame}>End Game ON</Button>;
 };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
