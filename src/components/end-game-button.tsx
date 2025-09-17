@@ -1,10 +1,10 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Dispatch, bindActionCreators } from 'redux';
+import React from "react";
+import { connect } from "react-redux";
+import { Dispatch, bindActionCreators } from "redux";
 
-import * as actions from 'store/actions';
+import * as actions from "store/actions";
 
-import Button from './button';
+import Button from "./button";
 
 interface DispatchProps {
   actions: typeof actions;
@@ -19,8 +19,8 @@ const EndGameButton = (props: Props) => {
     actions.endGame();
   }
 
-  return (<Button onClick={handleEndGame}>End Game</Button>);
-}
+  return <Button onClick={handleEndGame}>Another thing</Button>;
+};
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   actions: bindActionCreators(actions, dispatch),
